@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using TodoAPI.Models;
+using BeverageAPI.Models;
 
-namespace TodoAPI
+namespace BeverageAPI
 {
     public class Startup
     {       
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase());
+            services.AddDbContext<BeverageContext>(opt => opt.UseInMemoryDatabase());
             services.AddMvc();
         }
 
